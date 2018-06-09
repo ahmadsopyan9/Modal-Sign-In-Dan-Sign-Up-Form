@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modal-Sign-In-Dan-Sign-Up-Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+
+<div class="section">
+<h2>Modal Sign In Dan Sign Up Form</h2>
+
+<img src="https://gravatar.com/avatar/46c057206f7d0e9425a2dbbc443f0551?s=512&d=https://codepen.io/assets/avatars/user-avatar-512x512-6e240cf350d2f1cc07c2bed234c3a3bb5f1b237023c204c782622e80d6b212ba.png" class="myImg">
+
+<p>
+<br>
+<button onclick="document.getElementById('sign').style.display='block'" style="width:auto; background-color: purple;">Sign In Now</button>
+
+<button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign Up Now</button>
+</p>
+</div>
+
+<!-- Modal Sign In-->
+<div id="sign" class="modal">
+  <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign In</h1>
+      <p>Please fill in this form to access an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signbtn">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- Modal Sign Up-->
+<div id="signup" class="modal2">
+  <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="section">
+   <h4 class="title-bottom">Semoga Bisa Bermanfaat Untuk Kalian Semua...</h4>
+</div>
+
+<script>
+// AMBIL MODAL SIGN
+var modal = document.getElementById('sign');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// AMBIL MODAL SIGNUP
+var modal2 = document.getElementById('signup');
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
